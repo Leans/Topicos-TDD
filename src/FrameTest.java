@@ -36,5 +36,13 @@ public class FrameTest {
 		assertEquals(0, unFrame.getIntento1());
 		assertEquals(5, unFrame.getIntento2());
 	}
+	
+	@Test
+	public void testPuntajeInvalidoMayorIntento2() {
+		Frame unFrame = new Frame(3, 15);
+		//si recibe un puntaje mayor a 10, coloca 10 en el puntaje
+		assertEquals(3, unFrame.getIntento1());
+		assertEquals(10, unFrame.getIntento2());
+	}
 
 }
