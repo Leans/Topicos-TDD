@@ -45,4 +45,13 @@ public class Frame {
 		return (this.getIntento1() + this.getIntento2());
 	}
 
+	public boolean esPleno() {
+		if (this.getIntento1() == 10) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+
 }
