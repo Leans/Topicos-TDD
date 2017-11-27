@@ -17,8 +17,8 @@ public class FrameTest {
 	@Test
 	public void testFrame() {
 		Frame unFrame = new Frame(3, 5);
-		assertTrue(3, unFrame.getIntento1());
-		assertTrue(5, unFrame.getIntento2());
+		assertEquals(3, unFrame.getIntento1());
+		assertEquals(5, unFrame.getIntento2());
 	}
 
 }
