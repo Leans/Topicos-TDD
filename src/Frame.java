@@ -46,8 +46,12 @@ public class Frame {
 		return this.intento2;
 	}
 
-	public int ContabilizarPuntaje() {
-		return (this.getIntento1() + this.getIntento2());
+	public int contabilizarPuntaje() {
+		if (this.esPleno()) {
+			return 10;
+		} else {
+			return (this.getIntento1() + this.getIntento2());
+		}
 	}
 
 	public boolean esPleno() {

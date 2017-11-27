@@ -16,7 +16,7 @@ public class JuegoTest {
 
 	@Test
 	public void testJuego() {
-		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
+		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5, 0, 0);
 		//frame 1 [2, 3]
 		assertEquals(2, ((Frame)unJuego.getFrame(1)).getIntento1() );
 		assertEquals(3, ((Frame)unJuego.getFrame(1)).getIntento2() );
@@ -47,23 +47,26 @@ public class JuegoTest {
 		//frame 10 [4, 5]
 		assertEquals(4, ((Frame)unJuego.getFrame(10)).getIntento1() );
 		assertEquals(5, ((Frame)unJuego.getFrame(10)).getIntento2() );
+		//extra [0, 0]
+		assertEquals(0, ((Frame)unJuego.getFrame(11)).getIntento1() );
+		assertEquals(0, ((Frame)unJuego.getFrame(11)).getIntento2() );
 	}
 	
 	@Test
 	public void testPuntuarJuego() {
-		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
+		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5, 0, 0);
 		assertEquals(72, unJuego.puntuarJuego());
 	}
 	
 	@Test
 	public void testPuntuarJuegoMinimo() {
-		Juego unJuego = new Juego(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+		Juego unJuego = new Juego(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		assertEquals(0, unJuego.puntuarJuego());
 	}
 	
 	@Test
 	public void testPuntuarJuegoMaximo() {
-		Juego unJuego = new Juego(10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0);
+		Juego unJuego = new Juego(10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 10);
 		assertEquals(300, unJuego.puntuarJuego());
 	}
 
