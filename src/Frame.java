@@ -41,4 +41,8 @@ public class Frame {
 		return this.intento2;
 	}
 
+	public int ContabilizarPuntaje() {
+		return (this.getIntento1() + this.getIntento2());
+	}
+
 }
