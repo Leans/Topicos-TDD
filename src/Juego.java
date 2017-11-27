@@ -32,21 +32,21 @@ public class Juego {
 		Frame proxFrame;
 		Frame proxFrame2;
 		for (int i = 1; i<11; i++) {
-			unFrame = this.getFrame(i);
-			
+			unFrame = this.getFrame(i);			
 			puntaje = puntaje + unFrame.contabilizarPuntaje();
 			
 			if (i<9 && unFrame.esPleno()) {
-				puntaje = puntaje + unFrame.contabilizarPuntaje();
-				
-				proxFrame = this.getFrame(i+1);
-				
+//				puntaje = puntaje + unFrame.contabilizarPuntaje();				
+				proxFrame = this.getFrame(i+1);				
 				puntaje = puntaje + proxFrame.contabilizarPuntaje();
 				
-				if (proxFrame.esPleno()) {
-					proxFrame2 = this.getFrame(i+2);
-					puntaje = puntaje + proxFrame2.contabilizarPuntaje();
-				}
+				proxFrame2 = this.getFrame(i+2);
+				puntaje = puntaje + proxFrame2.contabilizarPuntaje();
+				
+//				if (proxFrame.esPleno()) {
+//					proxFrame2 = this.getFrame(i+2);
+//					puntaje = puntaje + proxFrame2.contabilizarPuntaje();
+//				}
 			}
 		}
 		return puntaje;

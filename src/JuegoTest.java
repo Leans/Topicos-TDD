@@ -69,5 +69,11 @@ public class JuegoTest {
 		Juego unJuego = new Juego(10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 10);
 		assertEquals(300, unJuego.puntuarJuego());
 	}
+	
+	@Test
+	public void testPuntuarJuegoConPleno() {
+		Juego unJuego = new Juego(2, 3, 10, 0, 10, 0, 4, 5, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 10, 0, 4, 10);
+		assertEquals(128, unJuego.puntuarJuego());
+	}
 
 }
