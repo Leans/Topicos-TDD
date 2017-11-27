@@ -54,5 +54,11 @@ public class JuegoTest {
 		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
 		assertEquals(72, unJuego.puntuarJuego());
 	}
+	
+	@Test
+	public void testPuntuarJuegoMinimo() {
+		Juego unJuego = new Juego(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+		assertEquals(0, unJuego.puntuarJuego());
+	}
 
 }
