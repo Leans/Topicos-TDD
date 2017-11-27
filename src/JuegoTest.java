@@ -48,5 +48,11 @@ public class JuegoTest {
 		assertEquals(4, ((Frame)unJuego.getFrame(10)).getIntento1() );
 		assertEquals(5, ((Frame)unJuego.getFrame(10)).getIntento2() );
 	}
+	
+	@Test
+	public void testPuntuarJuego() {
+		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
+		assertEquals(72, unJuego.puntuarJuego());
+	}
 
 }
