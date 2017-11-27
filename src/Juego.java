@@ -24,6 +24,14 @@ public class Juego {
 	public Frame getFrame(int p_i) {
 		return ((Frame)this.frames.get(p_i-1));
 	}
+
+	public int puntuarJuego() {
+		int puntaje = 0;
+		for (Frame frame : this.frames) {
+			puntaje = puntaje + frame.getIntento1() + frame.getIntento2();
+		}
+		return puntaje;
+	}
 	
 	
 
