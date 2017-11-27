@@ -28,5 +28,13 @@ public class FrameTest {
 		assertEquals(10, unFrame.getIntento1());
 		assertEquals(5, unFrame.getIntento2());
 	}
+	
+	@Test
+	public void testPuntajeInvalidoMenorIntento1() {
+		Frame unFrame = new Frame(-7, 5);
+		//si recibe un puntaje menor a 0, coloca 0 en el puntaje
+		assertEquals(0, unFrame.getIntento1());
+		assertEquals(5, unFrame.getIntento2());
+	}
 
 }
