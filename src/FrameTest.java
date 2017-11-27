@@ -52,5 +52,12 @@ public class FrameTest {
 		assertEquals(3, unFrame.getIntento1());
 		assertEquals(0, unFrame.getIntento2());
 	}
+	
+	@Test
+	public void testContabilizarPuntaje() {
+		Frame unFrame = new Frame(2, 5);
+		assertEquals(7, unFrame.ContabilizarPuntaje());
+		
+	}
 
 }
