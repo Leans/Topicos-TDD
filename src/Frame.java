@@ -6,12 +6,7 @@ public class Frame {
 	
 	public Frame(int p_intento1, int p_intento2) {		
 		this.setIntento1(p_intento1);
-		
-		if (p_intento2 > 10) {
-			this.intento2 = 10;
-		} else {
-			this.intento2 = p_intento2;
-		}		
+		this.setIntento2(p_intento2);
 	}
 	
 	private void setIntento1(int p_intento1) {
@@ -24,6 +19,14 @@ public class Frame {
 				this.intento1 = p_intento1;
 			}
 		}
+	}
+	
+	private void setIntento2(int p_intento2) {
+		if (p_intento2 > 10) {
+			this.intento2 = 10;
+		} else {
+			this.intento2 = p_intento2;
+		}	
 	}
 
 	public int getIntento1() {
