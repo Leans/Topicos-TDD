@@ -16,7 +16,7 @@ public class JuegoTest {
 
 	@Test
 	public void testJuego() {
-		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
+		Juego unJuego = new Juego(2, 3, 4, 2, 3, 4, 2, 1, 3, 5, 5, 4, 5, 4, 6, 3, 4, 3, 4, 5);
 		//frame 1 [2, 3]
 		assertEquals(2, ((Frame)unJuego.getFrame(1)).getIntento1() );
 		assertEquals(3, ((Frame)unJuego.getFrame(1)).getIntento2() );
