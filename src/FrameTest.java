@@ -61,7 +61,7 @@ public class FrameTest {
 	
 	@Test
 	public void testEsPleno() {
-		Frame unFrame = new Frame(10, 5);
+		Frame unFrame = new Frame(10, 0);
 		assertTrue(unFrame.esPleno());
 	}
 	
@@ -69,6 +69,14 @@ public class FrameTest {
 	public void testNoEsPleno() {
 		Frame unFrame = new Frame(3, 5);
 		assertFalse(unFrame.esPleno());
+	}
+	
+	@Test
+	public void testCrearPlenoInvalido() {
+		Frame unFrame = new Frame(10, 5);
+		//si se crea un frame pleno, con un numero invalido en el 2do intento se pone a 0
+		assertEquals(10, unFrame.getIntento1());
+		assertEquals(0, unFrame.getIntento2());
 	}
 
 }

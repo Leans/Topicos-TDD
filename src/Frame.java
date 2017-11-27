@@ -6,7 +6,12 @@ public class Frame {
 	
 	public Frame(int p_intento1, int p_intento2) {		
 		this.setIntento1(p_intento1);
-		this.setIntento2(p_intento2);
+		if (p_intento1 == 10) {
+			this.setIntento2(0);
+		} else {
+			this.setIntento2(p_intento2);
+		}
+		
 	}
 	
 	private void setIntento1(int p_intento1) {
