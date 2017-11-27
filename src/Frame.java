@@ -13,7 +13,11 @@ public class Frame {
 		if (p_intento1 > 10) {
 			this.intento1 = 10;
 		} else {
-			this.intento1 = p_intento1;
+			if (p_intento1 < 0) {
+				this.intento1 = 0;
+			} else {
+				this.intento1 = p_intento1;
+			}
 		}
 	}
 
