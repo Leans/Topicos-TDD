@@ -60,5 +60,11 @@ public class JuegoTest {
 		Juego unJuego = new Juego(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		assertEquals(0, unJuego.puntuarJuego());
 	}
+	
+	@Test
+	public void testPuntuarJuegoMaximo() {
+		Juego unJuego = new Juego(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+		assertEquals(200, unJuego.puntuarJuego());
+	}
 
 }
