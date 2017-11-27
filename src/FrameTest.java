@@ -56,13 +56,19 @@ public class FrameTest {
 	@Test
 	public void testContabilizarPuntaje() {
 		Frame unFrame = new Frame(2, 5);
-		assertEquals(7, unFrame.ContabilizarPuntaje());		
+		assertEquals(7, unFrame.ContabilizarPuntaje());
 	}
 	
 	@Test
 	public void testEsPleno() {
 		Frame unFrame = new Frame(10, 5);
 		assertTrue(unFrame.esPleno());
+	}
+	
+	@Test
+	public void testNoEsPleno() {
+		Frame unFrame = new Frame(3, 5);
+		assertFalse(unFrame.esPleno());
 	}
 
 }
